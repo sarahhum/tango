@@ -20,7 +20,7 @@ blockquote,q {quotes: none;}
 blockquote:before,blockquote:after,q:before,q:after {content: ""; content: none;}
 table { border-spacing: 0;border-collapse: collapse;}
 
-  a { text-decoration: none; color: #232323; border-bottom: 1px dotted #ccc; }
+  a { text-decoration: none; color: #232323; }
   a:visited { }
   a:hover { }
   a:focus {outline: thin dotted;}
