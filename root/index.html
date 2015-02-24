@@ -9,11 +9,11 @@
     <meta name="author" content="Sarah Hum">
     <meta name="copyright" content="&copy; 2015 Sarah Hum">
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="css/styles.css">
 
     <script type="text/javascript" src="js/lib/jquery-2.1.0.min.js"></script>
     <script src="//use.typekit.net/txh2bpg.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <nav>
@@ -31,33 +31,39 @@
     <div id="wrapper">
       <div id="sidebar">
         <div id="user-image">Some user image here</div>
-        <div id="sidebar-scrolling">
-          <h1>jafls;dgjals;dkgj asdlkgj sda;lkgjds ;gldsjga ;dslgjads l;gjasd glsjg; lasdjg lskjg adslkgjds;lgjkas dglkasjdgl;askdjg ;lskgja s;ldkgj slgjads;l kgjad ;glksjag;ladsjg a;lg dlakjgdls;kj sladkgj a;sdlgkja s;dlgjka sdlgjs ad;lkgjas dlgkajd gl;kadsjg l;asdkgj dal;sgj ads;lgkja sdl;gkjs ;dlgkjas d;lgkjsadg ;lsakdjg ;lskgj as;ldgj asdl;kgj dlajdlgkajsd glakdjsg al;skdgj sa;lkdgj asd;lkgja ls;dgkja l;dsgjk </h1>
+        <div id="sidebar-content">
+          <h1>jafls;dgjals;dkgj asdlkgj sda;lLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in lacus ac orci lobortis elementum vel ac nisi. Cras eget molestie lacus, non congue ante. Ut quis ex sollicitudin, maximus lacus non, luctus nisi. Aliquam tristique pulvinar ultrices. Duis maximus enim et diam semper hendrerit. Praesent sit amet risus malesuada, porttitor neque quis, condimentum erat. Vestibulum eget nunc velit.
+          Maecenas a magna consequat, interdum erat nec, volutpat lacus. In hac habitasse platea dictumst. Pellentesque gravida eros nec euismod malesuada. Quisque tempor, arcu in pellentesque placerat, sem ex consectetur tortor, at condimentum elit tortor at tellus.
+          Nulla porttitor ante ut malesuada fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in leo mauris. Suspendisse scelerisque mi dolor. Ut tortor mauris, posuere vel interdum non, sagittis et lectus. Nunc iaculis arcu id justo tempus placerat. Nullam non ante nulla. Aenean varius sodales ipsum vitae consequat. In sapien risus, ornare nec lacus vitae, rhoncus tincidunt eros.
+          Fusce quis pulvinar tortor. Fusce quis varius nulla. Aliquam viverra laoreet ligula, ut volutpat ante tempor pellentesque. Sed in tellus sit amet est hendrerit pellentesque quis pulvinar nulla. Curabitur at massa elementum, imperdiet dolor sit amet, volutpat tellus. Curabitur facilisis urna nec urna ultricies feugiat. Aliquam risus risus, venenatis vitae tincidunt a, sodales ac turpis. Ut consectetur tortor elementum imperdiet molestie. Phasellus gravida sem diam, et volutpat neque rutrum non. Proin volutpat pellentesque lectus et egestas. Etiam vitae malesuada libero, quis dictum erat.</h1>
         </div>
       </div>
       <div id="main">
         <div id="main-content">
-          <h1>jafls;dgjals;dkgj asdlkgj sda;lkgjds ;gldsjga ;dslgjads l;gjasd glsjg; lasdjg lskjg adslkgjds;lgjkas dglkasjdgl;askdjg ;lskgja s;ldkgj slgjads;l kgjad ;glksjag;ladsjg a;lg dlakjgdls;kj sladkgj a;sdlgkja s;dlgjka sdlgjs ad;lkgjas dlgkajd gl;kadsjg l;asdkgj dal;sgj ads;lgkja sdl;gkjs ;dlgkjas d;lgkjsadg ;lsakdjg ;lskgj as;ldgj asdl;kgj dlajdlgkajsd glakdjsg al;skdgj sa;lkdgj asd;lkgja ls;dgkja l;dsgjk </h1>
-          <div id="wallet-info">
-            <h2 id="coin-label">Bitcoin Wallet</h2>
-            <div id="secret-info">
-              <span id="secret-key"></span>
-              <h3>Secret Key</h3>
-            </div>
-            <div id="public-info">
-              <span id="public-address"></span>
-              <h3>Public Address</h3>
-            </div>
-            <div id="private-info">
-              <span id="private-key"></span>
-              <h3>Private Key</h3>
-            </div>
-            <button id="generate-button">GENERATE</button>
-            <div id="secret-toggle">
-              <input type="checkbox" id="show-secret-key-box" />
-              <h3>Show Secret Key</h3>
-            </div>
-          </div>
+          <h1>Recently Bookmarked</h1>
+          <ul class="cards">
+            <li class="card">
+              <div class="img-container">
+                <img src="http://upload.wikimedia.org/wikipedia/en/9/9b/Caribou_Our_Love.jpg" alt="">
+                <span class="price">$35</span>
+              </div>
+              <div class="card-info">
+                <h2>Caribou at the Fillmore SF</h2>
+                <h3>January 23, 2015</h3>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img-container">
+                <img src="http://lorempixel.com/260/180/cats" alt="">
+                <span class="price">$30</span>
+              </div>
+              
+              <div class="card-info">
+                <h2>$30 for $50 Worth of Sushi ...</h2>
+                <h3>San Juan, Puerto Rico</h3>
+              </div>
+            </li>
+          </ul>
           <footer>
             <div id="footer-content">
               <div class="left">

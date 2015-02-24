@@ -1,0 +1,28 @@
+@mixin hover-transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+@mixin vertical-align($translate-value) {
+	top: 50%;
+	-webkit-transform: translateY($translate-value);
+	-ms-transform: translateY($translate-value);
+	-moz-transform: translateY($translate-value);
+	transform: translateY($translate-value);
+}
+
+@mixin border-box() {
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin border-radius($radius) {
+	-moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+}
