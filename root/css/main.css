@@ -48,18 +48,18 @@ a:hover, a:active {
   outline: 0; }
 
 ::-moz-selection {
-  background: #aaa;
+  background: #ddd;
   color: #fff;
   text-shadow: none; }
 
 ::selection {
-  background: #aaa;
+  background: #ddd;
   color: #fff;
   text-shadow: none; }
 
 html, body {
   height: 100%;
-  background: #f3f4f0;
+  background: #f9f9f9;
   -webkit-font-smoothing: antialiased;
   font-family: "jaf-facitweb", Helvetica Neue, Helvetica, sans-serif; }
 
@@ -72,7 +72,6 @@ body {
   line-height: normal;
   width: 100%;
   height: 100%;
-  color: #f6f6f6;
   overflow: hidden;
   padding: 70px 0 0 0;
   -webkit-box-sizing: border-box;
@@ -109,7 +108,7 @@ nav {
 
 h1 {
   font-size: 16px;
-  color: #222; }
+  color: #232323; }
 
 h2 {
   font-size: 14px;
@@ -118,6 +117,12 @@ h2 {
 h3 {
   font-size: 14px;
   color: #999; }
+
+h4 {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px; }
 
 p, a {
   font-size: 13px;
@@ -131,8 +136,7 @@ p, a {
   width: 350px;
   height: calc(100% - 300px);
   margin: 300px 0 0 0;
-  background: #f9f9f9;
-  color: red;
+  background: #fff;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -144,6 +148,44 @@ p, a {
   #sidebar #user-image {
     position: fixed;
     top: 70px; }
+  #sidebar .sidebar-cards .sidebar-card {
+    margin: 0 0 10px 0;
+    padding: 20px;
+    background: #f3f3f3;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px; }
+    #sidebar .sidebar-cards .sidebar-card .countdown {
+      margin: 0 0 10px 0; }
+    #sidebar .sidebar-cards .sidebar-card .date {
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      color: #ff8710;
+      border: 1px solid #ff8710;
+      margin: 0 10px 0 0;
+      font-size: 20px;
+      line-height: 35px;
+      display: inline-block;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -khtml-border-radius: 3px;
+      border-radius: 3px; }
+      #sidebar .sidebar-cards .sidebar-card .date:after {
+        position: relative;
+        top: -18px;
+        content: 'DAYS';
+        font-size: 11px;
+        letter-spacing: 1px; }
+    #sidebar .sidebar-cards .sidebar-card .countdown-event {
+      position: relative;
+      top: 5px;
+      display: inline-block;
+      vertical-align: top; }
+      #sidebar .sidebar-cards .sidebar-card .countdown-event h1 {
+        margin: 0 0 4px 0; }
 
 #main {
   height: 100%;
@@ -152,35 +194,58 @@ p, a {
     height: 100%;
     overflow-y: auto;
     padding: 40px; }
-    #main #main-content .cards .card {
-      position: relative;
-      display: inline-block;
-      vertical-align: top;
-      width: 260px;
+    #main #main-content .cards {
+      font-size: 0;
+      margin: 20px 0 0 0; }
+      #main #main-content .cards .card {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 260px;
+        margin: 0 20px 20px 0;
+        background: #fff;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        border-radius: 3px; }
+        #main #main-content .cards .card .img-container {
+          height: 180px;
+          overflow: hidden; }
+          #main #main-content .cards .card .img-container img {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            width: 100%;
+            min-height: 180px; }
+        #main #main-content .cards .card .price {
+          position: absolute;
+          top: 125px;
+          left: 20px;
+          z-index: 1;
+          color: #fff;
+          font-size: 26px;
+          font-weight: 700;
+          text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
+        #main #main-content .cards .card .card-info {
+          padding: 10px 20px 15px 20px; }
+          #main #main-content .cards .card .card-info h2 {
+            margin: 0 0 5px 0; }
+    #main #main-content .subnav {
+      height: 45px;
+      width: 100%;
+      margin: 20px 0 0 0;
       background: #fff;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
       -moz-border-radius: 3px;
       -webkit-border-radius: 3px;
       -khtml-border-radius: 3px;
       border-radius: 3px; }
-      #main #main-content .cards .card .img-container {
-        height: 180px;
-        overflow: hidden; }
-        #main #main-content .cards .card .img-container img {
-          border-top-left-radius: 3px;
-          border-top-right-radius: 3px;
-          width: 100%; }
-      #main #main-content .cards .card .price {
-        position: absolute;
-        top: 125px;
-        left: 20px;
-        z-index: 1;
-        font-size: 26px;
-        font-weight: 700;
-        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
-      #main #main-content .cards .card .card-info {
-        padding: 10px 20px 15px 20px; }
-        #main #main-content .cards .card .card-info h2 {
-          margin: 0 0 5px 0; }
+      #main #main-content .subnav li {
+        display: inline-block;
+        margin: 0 20px;
+        color: #999;
+        font-size: 14px;
+        line-height: 45px; }
 
 #main-content footer {
   position: relative;
