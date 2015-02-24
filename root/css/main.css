@@ -126,10 +126,7 @@ h4 {
 
 p, a {
   font-size: 13px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 1px;
-  margin-bottom: 10px; }
+  font-weight: 400; }
 
 #sidebar {
   float: left;
@@ -158,32 +155,36 @@ p, a {
     -khtml-border-radius: 3px;
     border-radius: 3px; }
     #sidebar .sidebar-cards .sidebar-card .countdown {
+      position: relative;
       margin: 0 0 10px 0; }
-    #sidebar .sidebar-cards .sidebar-card .date {
-      text-align: center;
+    #sidebar .sidebar-cards .sidebar-card .date-container {
       width: 50px;
       height: 50px;
-      color: #ff8710;
-      border: 1px solid #ff8710;
       margin: 0 10px 0 0;
-      font-size: 20px;
-      line-height: 35px;
+      text-align: center;
+      color: #ff8710;
       display: inline-block;
+      border: 1px solid #ff8710;
       -moz-border-radius: 3px;
       -webkit-border-radius: 3px;
       -khtml-border-radius: 3px;
       border-radius: 3px; }
-      #sidebar .sidebar-cards .sidebar-card .date:after {
+      #sidebar .sidebar-cards .sidebar-card .date-container .date {
         position: relative;
-        top: -18px;
-        content: 'DAYS';
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%); }
+      #sidebar .sidebar-cards .sidebar-card .date-container p:first-child {
+        font-size: 20px;
+        margin: 0; }
+      #sidebar .sidebar-cards .sidebar-card .date-container p:last-child {
         font-size: 11px;
         letter-spacing: 1px; }
     #sidebar .sidebar-cards .sidebar-card .countdown-event {
       position: relative;
-      top: 5px;
-      display: inline-block;
-      vertical-align: top; }
+      display: inline-block; }
       #sidebar .sidebar-cards .sidebar-card .countdown-event h1 {
         margin: 0 0 4px 0; }
 
@@ -233,6 +234,7 @@ p, a {
     #main #main-content .subnav {
       height: 45px;
       width: 100%;
+      max-width: 820px;
       margin: 20px 0 0 0;
       background: #fff;
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);

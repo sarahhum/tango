@@ -7,11 +7,12 @@
 }
 
 @mixin vertical-align($translate-value) {
+  position: relative;
 	top: 50%;
-	-webkit-transform: translateY($translate-value);
-	-ms-transform: translateY($translate-value);
-	-moz-transform: translateY($translate-value);
-	transform: translateY($translate-value);
+	-webkit-transform: translateY(-$translate-value);
+	-ms-transform: translateY(-$translate-value);
+	-moz-transform: translateY(-$translate-value);
+	transform: translateY(-$translate-value);
 }
 
 @mixin border-box() {
