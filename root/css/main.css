@@ -95,7 +95,7 @@ nav {
     left: 40px; }
   nav a {
     color: #999;
-    font-size: 14px; }
+    font-size: 12px; }
   nav .nav-options {
     text-align: center; }
     nav .nav-options li {
@@ -155,6 +155,36 @@ h4 {
       position: relative;
       height: 320px;
       left: -280px; }
+    #sidebar #user-image .user-info {
+      position: absolute;
+      top: 0;
+      width: 350px;
+      height: 300px;
+      background: -moz-linear-gradient(top, transparent 0%, transparent 66%, rgba(0, 0, 0, 0.7) 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(66%, transparent), color-stop(100%, rgba(0, 0, 0, 0.7)));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, transparent 0%, transparent 66%, rgba(0, 0, 0, 0.7) 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, transparent 0%, transparent 66%, rgba(0, 0, 0, 0.7) 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, transparent 0%, transparent 66%, rgba(0, 0, 0, 0.7) 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, transparent 0%, transparent 66%, rgba(0, 0, 0, 0.7) 100%);
+      /* W3C */ }
+      #sidebar #user-image .user-info h1 {
+        position: absolute;
+        top: 230px;
+        left: 40px;
+        color: #fff;
+        font-size: 20px; }
+      #sidebar #user-image .user-info h2 {
+        position: absolute;
+        top: 260px;
+        left: 40px;
+        color: #fff;
+        opacity: 0.7;
+        font-size: 14px; }
   #sidebar .sidebar-cards .sidebar-card {
     margin: 0 0 10px 0;
     padding: 20px;
