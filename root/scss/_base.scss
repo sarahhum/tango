@@ -1,4 +1,4 @@
-  a { text-decoration: none; color: $dark-text; }
+  a { text-decoration: none; }
   a:visited { }
   a:hover { }
   a:focus {outline: thin dotted;}
@@ -32,12 +32,14 @@
   }
 
   nav {
-    position: absolute;
+    position: fixed;
     font-family: $main-font;
     top: 0px;
     width: 100%;
+    z-index: 999;
     height: $nav-height;
     background: white;
+    letter-spacing: 0.04em;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
 
     .logo {
@@ -46,7 +48,11 @@
       top: 20px;
       left: 40px;
     }
-
+    
+    a {
+      color: $medium-text;
+      font-size: $body-text;
+    }
     .nav-options {
       text-align: center;
 
@@ -89,23 +95,20 @@
     letter-spacing: 1px;
   }
 
-  p, a {
-    font-size: 13px;
-    font-weight: 400;
-  }
-
 #sidebar {
   float: left;
   width: $sidebar-width;
-  height: calc(100% - 300px);
-  margin: 300px 0 0 0;
+  height: calc(100% - 304px);
+  margin: 304px 0 0 0;
   background: $white;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+
+  p { margin: 0 0 $small-margin 0; }
 
   #sidebar-content {
     padding: $small-margin;
@@ -114,6 +117,16 @@
   #user-image {
     position: fixed;
     top: $nav-height;
+    height: 300px;
+    width: $sidebar-width;
+    overflow: hidden;
+    border-bottom: 4px solid $orange;
+
+    img {
+      position: relative;
+      height: 320px;
+      left: -280px;
+    }
   }
 
   .sidebar-cards {
@@ -179,7 +192,7 @@
 
       .countdown-event {
         position: relative;
-        
+        top: 4px;
         display: inline-block;
 
         h1 { margin: 0 0 4px 0; }
@@ -189,7 +202,7 @@
 }
 
 #main {
-  height: 100%;
+  height: calc(100% - 80px);
   padding: 0 0 0 $sidebar-width;
 
   #main-content {
@@ -199,8 +212,8 @@
 
     .cards {
       font-size: 0;
-      margin: $small-margin 0 0 0;
-
+      margin: $small-margin 0 $big-margin 0;
+      
       .card {
         position: relative;
         display: inline-block;
@@ -211,6 +224,12 @@
         box-shadow: $hard-shadow;
         @include border-radius($small-radius);
         
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+          @include hover-transition(all, 0.1s, ease-in-out);
+        }
+
         .img-container {
           height: 180px;
           overflow: hidden;
@@ -232,6 +251,23 @@
           font-size: 26px;
           font-weight: 700;
           text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .bookmark {
+          position: absolute;
+          top: $small-margin;
+          right: $small-margin;
+          width: 0;
+          height: 20px;
+          border-right: 10px solid $white;
+          border-left: 10px solid $white;
+          border-bottom: 10px solid transparent;
+
+          &:hover {
+            border-right: 10px solid $orange;
+          border-left: 10px solid $orange;
+          cursor: pointer;
+          }
         }
         
         .card-info {

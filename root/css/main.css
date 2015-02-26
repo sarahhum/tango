@@ -38,8 +38,7 @@ table {
   border-collapse: collapse; }
 
 a {
-  text-decoration: none;
-  color: #232323; }
+  text-decoration: none; }
 
 a:focus {
   outline: thin dotted; }
@@ -80,18 +79,23 @@ body {
   overflow-x: auto; }
 
 nav {
-  position: absolute;
+  position: fixed;
   font-family: "jaf-facitweb", Helvetica Neue, Helvetica, sans-serif;
   top: 0px;
   width: 100%;
+  z-index: 999;
   height: 70px;
   background: white;
+  letter-spacing: 0.04em;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15); }
   nav .logo {
     position: absolute;
     width: 80px;
     top: 20px;
     left: 40px; }
+  nav a {
+    color: #999;
+    font-size: 14px; }
   nav .nav-options {
     text-align: center; }
     nav .nav-options li {
@@ -124,27 +128,33 @@ h4 {
   font-size: 11px;
   letter-spacing: 1px; }
 
-p, a {
-  font-size: 13px;
-  font-weight: 400; }
-
 #sidebar {
   float: left;
   width: 350px;
-  height: calc(100% - 300px);
-  margin: 300px 0 0 0;
+  height: calc(100% - 304px);
+  margin: 304px 0 0 0;
   background: #fff;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   overflow: hidden;
-  overflow-y: scroll; }
+  overflow-y: auto; }
+  #sidebar p {
+    margin: 0 0 20px 0; }
   #sidebar #sidebar-content {
     padding: 20px; }
   #sidebar #user-image {
     position: fixed;
-    top: 70px; }
+    top: 70px;
+    height: 300px;
+    width: 350px;
+    overflow: hidden;
+    border-bottom: 4px solid #ff8710; }
+    #sidebar #user-image img {
+      position: relative;
+      height: 320px;
+      left: -280px; }
   #sidebar .sidebar-cards .sidebar-card {
     margin: 0 0 10px 0;
     padding: 20px;
@@ -184,12 +194,13 @@ p, a {
         letter-spacing: 1px; }
     #sidebar .sidebar-cards .sidebar-card .countdown-event {
       position: relative;
+      top: 4px;
       display: inline-block; }
       #sidebar .sidebar-cards .sidebar-card .countdown-event h1 {
         margin: 0 0 4px 0; }
 
 #main {
-  height: 100%;
+  height: calc(100% - 80px);
   padding: 0 0 0 350px; }
   #main #main-content {
     height: 100%;
@@ -197,7 +208,7 @@ p, a {
     padding: 40px; }
     #main #main-content .cards {
       font-size: 0;
-      margin: 20px 0 0 0; }
+      margin: 20px 0 40px 0; }
       #main #main-content .cards .card {
         position: relative;
         display: inline-block;
@@ -210,6 +221,14 @@ p, a {
         -webkit-border-radius: 3px;
         -khtml-border-radius: 3px;
         border-radius: 3px; }
+        #main #main-content .cards .card:hover {
+          cursor: pointer;
+          box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+          -webkit-transition: all 0.1s ease-in-out;
+          -moz-transition: all 0.1s ease-in-out;
+          -ms-transition: all 0.1s ease-in-out;
+          -o-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out; }
         #main #main-content .cards .card .img-container {
           height: 180px;
           overflow: hidden; }
@@ -227,6 +246,19 @@ p, a {
           font-size: 26px;
           font-weight: 700;
           text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); }
+        #main #main-content .cards .card .bookmark {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 0;
+          height: 20px;
+          border-right: 10px solid #fff;
+          border-left: 10px solid #fff;
+          border-bottom: 10px solid transparent; }
+          #main #main-content .cards .card .bookmark:hover {
+            border-right: 10px solid #ff8710;
+            border-left: 10px solid #ff8710;
+            cursor: pointer; }
         #main #main-content .cards .card .card-info {
           padding: 10px 20px 15px 20px; }
           #main #main-content .cards .card .card-info h2 {

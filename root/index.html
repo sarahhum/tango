@@ -10,7 +10,6 @@
     <meta name="copyright" content="&copy; 2015 Sarah Hum">
     <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <script type="text/javascript" src="js/lib/jquery-2.1.0.min.js"></script>
     <script src="//use.typekit.net/txh2bpg.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="css/main.css">
@@ -30,7 +29,7 @@
     </nav>
     <div id="wrapper">
       <div id="sidebar">
-        <div id="user-image">Some user image here</div>
+        <div id="user-image"><img src="img/leo-phoebe.jpg" alt=""></div>
         <div id="sidebar-content">
           <ul class="sidebar-cards">
             <li class="sidebar-card">
@@ -46,8 +45,10 @@
                   <h4>Dec 30 - Jan 01</h4>
                 </div>
               </div>
+              <br>
               <p>Round-trip flight</p>
               <p class="flight">HVN &#8594; PHL &#8594; SJC</p>
+              <br>
               <p>Accommodations</p>
               <p>349 Woodland Drive<br>
                   San Francisco, CA 94117<br>
@@ -125,15 +126,16 @@
           </ul>
           <h1>Recommended for You</h1>
           <ul class="subnav">
-            <li>All</li>
-            <li>Flight</li>
-            <li>Accommodation</li>
-            <li>Activities</li>
+            <li class="filter" data-filter="all">All</li>
+            <li class="filter" data-filter=".flight">Flight</li>
+            <li class="filter" data-filter=".accommodation">Accommodation</li>
+            <li class="filter" data-filter=".activities">Activities</li>
           </ul>
-          <ul class="cards">
-            <li class="card">
+          <ul id="mix-cards" class="cards">
+            <li class="card mix accommodation" data-myorder="1">
               <div class="img-container">
                 <img src="http://www.mediterraneanlettings.com/fotos/FOTO_ID62_6.jpg" alt="">
+                <span class="bookmark"></span>
                 <span class="price">$140</span>
               </div>
               <div class="card-info">
@@ -141,9 +143,10 @@
                 <h3>San Juan, Puerto Rico</h3>
               </div>
             </li>
-            <li class="card">
+            <li class="card mix accommodation" data-myorder="2">
               <div class="img-container">
                 <img src="http://imagesus.homeaway.com/mda01/ce073e8c-5267-4e16-9f05-c50bd4937a4a.1.6" alt="">
+                <span class="bookmark"></span>
                 <span class="price">$95</span>
               </div>
               
@@ -152,29 +155,55 @@
                 <h3>San Juan, Puerto Rico</h3>
               </div>
             </li>
-            <li class="card">
+            <li class="card mix activities" data-myorder="3">
+              <div class="img-container">
+                <img src="http://s1.r29static.com/bin/entry/309/x,80/1349917/image.jpg" alt="">
+                <span class="bookmark"></span>
+              </div>
+              <div class="card-info">
+                <h2>30 Amazing Things To Do in SF</h2>
+                <h3>Refinery 29</h3>
+              </div>
+            </li>
+            <li class="card mix accommodation" data-myorder="4">
+              <div class="img-container">
+                <img src="http://4.bp.blogspot.com/-1Qk8D3fscqs/UYhNzpFHBII/AAAAAAAAEPM/jtGmL2Yo2YA/s1600/IMG_6767.jpg" alt="">
+                <span class="bookmark"></span>
+                <span class="price">$145</span>
+              </div>
+              
+              <div class="card-info">
+                <h2>Quaint 1BR Apt Steps from Yale</h2>
+                <h3>New Haven, Conneticut</h3>
+              </div>
+            </li>
+            <li class="card mix flight" data-myorder="5">
               <div class="img-container">
                 <img src="http://cdn1.loyaltylobby.com/wp-content/uploads/2014/12/700x395xAir-Canada-Giftmassive-Giveaway-700x395.png.pagespeed.ic.KpSx3lzDhq.png" alt="">
+                <span class="bookmark"></span>
               </div>
               
               <div class="card-info">
                 <h2>Air Canada Giftmassive</h2>
-                <h3>Discounts</h3>
+                <h3>Air Canada</h3>
               </div>
             </li>
-            <li class="card">
+            <li class="card mix accommodation" data-myorder="6">
               <div class="img-container">
-                <img src="http://www.mediterraneanlettings.com/fotos/FOTO_ID62_6.jpg" alt="">
-                <span class="price">$140</span>
+                <img src="http://yacineaziz.com/wp-content/uploads/2014/10/Breathtaking-Luxury-Linens-decorating-ideas-for-Bedroom-Contemporary-design-ideas-with-Breathtaking-accent-art-Airbnb.jpg" alt="">
+                <span class="bookmark"></span>
+                <span class="price">$110</span>
               </div>
+              
               <div class="card-info">
-                <h2>Beautiful Beach-Front</h2>
-                <h3>San Juan, Puerto Rico</h3>
+                <h2>1BR @ Downtown NH - bright ...</h2>
+                <h3>New Haven, Conneticut</h3>
               </div>
             </li>
-            <li class="card">
+            <li class="card mix accommodation" data-myorder="7">
               <div class="img-container">
                 <img src="http://imagesus.homeaway.com/mda01/ce073e8c-5267-4e16-9f05-c50bd4937a4a.1.6" alt="">
+                <span class="bookmark"></span>
                 <span class="price">$95</span>
               </div>
               
@@ -183,14 +212,24 @@
                 <h3>San Juan, Puerto Rico</h3>
               </div>
             </li>
-            <li class="card">
+            <li class="card mix activities" data-myorder="8">
               <div class="img-container">
-                <img src="http://cdn1.loyaltylobby.com/wp-content/uploads/2014/12/700x395xAir-Canada-Giftmassive-Giveaway-700x395.png.pagespeed.ic.KpSx3lzDhq.png" alt="">
+                <img src="http://cherryblossomfloraldesigns.com/images/weddings/Kelly-David/yellow-green-cute-bouquet-1.jpg" alt="">
+                <span class="bookmark"></span>
               </div>
-              
               <div class="card-info">
-                <h2>Air Canada Giftmassive</h2>
-                <h3>Discounts</h3>
+                <h2>20% Off Flowers</h2>
+                <h3>Send Flowers</h3>
+              </div>
+            </li>
+            <li class="card mix activities" data-myorder="9">
+              <div class="img-container">
+                <img src="http://assets3.thrillist.com/v1/image/1279767/size/tmg-slideshow_xxl" alt="">
+                <span class="bookmark"></span>
+              </div>
+              <div class="card-info">
+                <h2>The 10 Best Date Hikes in SF</h2>
+                <h3>Thrillist</h3>
               </div>
             </li>
           </ul>
@@ -227,6 +266,8 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>
 

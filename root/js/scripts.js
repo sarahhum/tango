@@ -1,0 +1,3 @@
+$(function(){
+  $('#mix-cards').mixItUp();
+});
