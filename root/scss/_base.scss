@@ -114,51 +114,6 @@
     padding: $small-margin;
   }
 
-  #user-image {
-    position: fixed;
-    top: $nav-height;
-    height: 300px;
-    width: $sidebar-width;
-    overflow: hidden;
-    border-bottom: 4px solid $orange;
-
-    img {
-      position: relative;
-      height: 320px;
-      left: -280px;
-    }
-
-    .user-info {
-      position: absolute;
-      top: 0;
-      width: $sidebar-width;
-      height: 300px;
-      background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.7) 100%); /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(66%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 66%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 66%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 66%,rgba(0,0,0,0.7) 100%); /* IE10+ */
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 66%,rgba(0,0,0,0.7) 100%); /* W3C */
-
-      h1 {
-        position: absolute;
-        top: 230px;
-        left: $small-margin*2;
-        color: $white;
-        font-size: 20px;
-      }
-
-      h2 {
-        position: absolute;
-        top: 260px;
-        left: $small-margin*2;
-        color: $white;
-        opacity: 0.7;
-        font-size: $body-text;
-      }
-    }
-  }
-
   .sidebar-cards {
     .sidebar-card {
       margin: 0 0 $small-margin/2 0;
@@ -198,27 +153,6 @@
           }
         }
       }
-
-      // .date {
-      //   text-align: center;
-      //   width: 50px;
-      //   height: 50px;
-      //   color: $orange;
-      //   border: 1px solid $orange;
-      //   margin: 0 $small-margin/2 0 0;
-      //   font-size: 20px;
-      //   line-height: 35px;
-      //   display: inline-block;
-      //   @include border-radius($small-radius);
-
-      //   &:after {
-      //     position: relative;
-      //     top: -18px;
-      //     content: 'DAYS';
-      //     font-size: $uppercase-text;
-      //     letter-spacing: 1px;
-      //   }
-      // }
 
       .countdown-event {
         position: relative;
@@ -308,32 +242,6 @@
         }
       }
     }
-
-    .subnav {
-      height: 45px;
-      width: 100%;
-      max-width: 820px;
-      margin: $small-margin 0 0 0;
-      padding: 0 0 2px 0;
-      background: $white;
-      box-shadow: $hard-shadow;
-      @include border-radius($small-radius);
-
-      li {
-        display: inline-block;
-        margin: 0 $small-margin;
-        color: $medium-text;
-        font-size: $body-text;
-        line-height: 45px;
-
-        &.active {
-          color: $orange;
-          border-bottom: 2px solid $orange;
-        }
-
-        &:hover { cursor: pointer; }
-      }
-    }
   }
 }
 
@@ -372,43 +280,4 @@ footer a {
   width: 45%;
   display: inline-block;
   vertical-align: top;
-  }
-
-/*::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
 }
-
-::-webkit-scrollbar-track {
-  background: #444;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #666;
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-}*/
-
-
-/* Media Queries */
-
-  /* Bigger than 960 */
-  @media only screen and (min-width: 1300px) {
-  }
-
-  /* Tablet Portrait size to standard 960 (devices and browsers) */
-  @media only screen and (max-width: 959px) {
-  }
-
-  /* All Mobile Sizes (devices and browser)
-  @media only screen and (max-width: 767px) { }*/
-
-  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-  @media only screen and (max-width: 767px) {
-  }
-
-  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-  @media only screen and (max-width: 479px) {
-
-  }
