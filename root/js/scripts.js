@@ -1,3 +1,5 @@
-$(function(){
-  $('#mix-cards').mixItUp();
+$(document).ready(function(){
+  $(function(){
+    $('#mix-cards').mixItUp();
+  });
 });
