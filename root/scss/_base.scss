@@ -40,7 +40,7 @@
     height: $nav-height;
     background: white;
     letter-spacing: 0.04em;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 0px rgba(100, 100, 100, 0.05);
 
     .logo {
       position: absolute;
@@ -103,6 +103,7 @@
     letter-spacing: 1px;
 
     &.section-title {
+      display: block;
       margin: 9px 0 30px 0;
     }
   }
@@ -123,6 +124,7 @@
   p { margin: 0 0 $small-margin 0; }
 
   #sidebar-content {
+    position: relative;
     padding: $small-margin;
 
     h4 { display: inline-block; }
@@ -264,12 +266,15 @@
   display: inline-block;
   padding: 7px 15px;
   border: 1px solid $light-grey;
-  vertical-align: top;
 
   @include border-radius(3px);
   @include hover-transition(all, 0.1s, ease-in-out);
 
-  &.right { float: right; }
+  &.right { 
+    position: absolute;
+    top: $small-margin;
+    right: $small-margin;
+  }
 
   &:hover {
     cursor: pointer;
@@ -282,10 +287,21 @@
   display: inline-block;
   width: 100%;
   color: #aaa;
+
+  p {
+    font-size: $small-text;
+    margin: 0 0 10px 0;
+  }
 }
 
 footer a {
+  font-size: $small-text;
+  display: block;
   color: #888;
+
+  &:hover {
+    color: $dark-text;
+  }
 }
 
 #main-content footer #copyright {
@@ -294,22 +310,16 @@ footer a {
   margin: 30px 0 20px 0;
 }
 
-#footer-content {
-  border-top: 1px solid #e7e7e7;
-  padding: 50px 0 0 60px;
-}
-
 #footer-content .left {
   margin: 0 8% 0 0;
-  max-width: 270px;
+  max-width: 370px;
 }
 
 #footer-content .right {
-  min-width: 400px;
+  max-width: 370px;
 }
 
 #footer-content .left, #footer-content .right {
-  width: 45%;
   display: inline-block;
   vertical-align: top;
   }

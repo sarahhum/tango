@@ -87,7 +87,7 @@ nav {
   height: 70px;
   background: white;
   letter-spacing: 0.04em;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0px 2px 0px rgba(100, 100, 100, 0.05); }
   nav .logo {
     position: absolute;
     width: 80px;
@@ -133,6 +133,7 @@ h4 {
   font-size: 11px;
   letter-spacing: 1px; }
   h4.section-title {
+    display: block;
     margin: 9px 0 30px 0; }
 
 #sidebar {
@@ -150,6 +151,7 @@ h4 {
   #sidebar p {
     margin: 0 0 20px 0; }
   #sidebar #sidebar-content {
+    position: relative;
     padding: 20px; }
     #sidebar #sidebar-content h4 {
       display: inline-block; }
@@ -269,7 +271,6 @@ h4 {
   display: inline-block;
   padding: 7px 15px;
   border: 1px solid #ddd;
-  vertical-align: top;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
@@ -280,7 +281,9 @@ h4 {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out; }
   .ghost-button.right {
-    float: right; }
+    position: absolute;
+    top: 20px;
+    right: 20px; }
   .ghost-button:hover {
     cursor: pointer;
     border: 1px solid #999; }
@@ -290,28 +293,30 @@ h4 {
   display: inline-block;
   width: 100%;
   color: #aaa; }
+  #main-content footer p {
+    font-size: 10px;
+    margin: 0 0 10px 0; }
 
 footer a {
+  font-size: 10px;
+  display: block;
   color: #888; }
+  footer a:hover {
+    color: #232323; }
 
 #main-content footer #copyright {
   font-size: 10px;
   color: #bbb;
   margin: 30px 0 20px 0; }
 
-#footer-content {
-  border-top: 1px solid #e7e7e7;
-  padding: 50px 0 0 60px; }
-
 #footer-content .left {
   margin: 0 8% 0 0;
-  max-width: 270px; }
+  max-width: 370px; }
 
 #footer-content .right {
-  min-width: 400px; }
+  max-width: 370px; }
 
 #footer-content .left, #footer-content .right {
-  width: 45%;
   display: inline-block;
   vertical-align: top; }
 
@@ -321,7 +326,7 @@ footer a {
   height: 300px;
   width: 350px;
   overflow: hidden;
-  border-bottom: 4px solid #ff8710; }
+  border-bottom: 3px solid #ff8710; }
   #homepage #user-image img {
     position: relative;
     height: 320px;
