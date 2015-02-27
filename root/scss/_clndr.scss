@@ -18,6 +18,7 @@ $cal-border: 1px solid transparent;
   font-family: $main-font;
   font-size: $body-text;
   border-top: 4px solid $light-background;
+  background: $white;
 
   .clndr {
     width: calc(100% - 40px);
@@ -175,13 +176,13 @@ box-shadow: inset 0px 0px 0px 4px rgba(255,255,255,1);
   // border-left: $cal-border;
   // border-top: $cal-border;
   width: 100%;
-  background: #eee;
+  background: rgba( $orange, .3 );
 }
 .cal1 .clndr .clndr-table tr .empty:hover,
 .cal1 .clndr .clndr-table tr .adjacent-month:hover,
 .cal1 .clndr .clndr-table tr .my-empty:hover,
 .cal1 .clndr .clndr-table tr .my-adjacent-month:hover {
-  background: #ddd;
+  background: $light-grey;
 }
 .cal1 .clndr .clndr-table tr .empty:last-child,
 .cal1 .clndr .clndr-table tr .adjacent-month:last-child,

@@ -6,7 +6,7 @@
     margin: 0;
 
     #sidebar-content {
-      height: calc(100% - 346px);
+      height: calc(100% - 342px);
       overflow: auto;
 
       .sidebar-cards .sidebar-card {
@@ -15,10 +15,6 @@
           box-shadow: 0 0 0 2pt $orange;
         }
         .countdown-event { top: 0; }
-      }
-
-      h4.section-title {
-        margin: 9px 0 30px 0;
       }
     }
   }

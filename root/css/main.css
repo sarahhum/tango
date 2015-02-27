@@ -132,6 +132,8 @@ h4 {
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 1px; }
+  h4.section-title {
+    margin: 9px 0 30px 0; }
 
 #sidebar {
   float: left;
@@ -267,6 +269,7 @@ h4 {
   display: inline-block;
   padding: 7px 15px;
   border: 1px solid #ddd;
+  vertical-align: top;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
@@ -383,7 +386,7 @@ footer a {
   height: 100%;
   margin: 0; }
   #planner #sidebar #sidebar-content {
-    height: calc(100% - 346px);
+    height: calc(100% - 342px);
     overflow: auto; }
     #planner #sidebar #sidebar-content .sidebar-cards .sidebar-card:hover {
       cursor: pointer; }
@@ -391,8 +394,6 @@ footer a {
       box-shadow: 0 0 0 2pt #ff8710; }
     #planner #sidebar #sidebar-content .sidebar-cards .sidebar-card .countdown-event {
       top: 0; }
-    #planner #sidebar #sidebar-content h4.section-title {
-      margin: 9px 0 30px 0; }
 #planner #main-content #planner-countdowns .mix {
   display: none; }
 
@@ -411,7 +412,8 @@ footer a {
   padding: 20px 0;
   font-family: "jaf-facitweb", Helvetica Neue, Helvetica, sans-serif;
   font-size: 14px;
-  border-top: 4px solid #f9f9f9; }
+  border-top: 4px solid #f9f9f9;
+  background: #fff; }
   .cal1 .clndr {
     width: calc(100% - 40px);
     margin: 0 20px; }
@@ -541,7 +543,7 @@ footer a {
 .cal1 .clndr .clndr-table tr .my-empty,
 .cal1 .clndr .clndr-table tr .my-adjacent-month {
   width: 100%;
-  background: #eee; }
+  background: rgba(255, 135, 16, 0.3); }
 
 .cal1 .clndr .clndr-table tr .empty:hover,
 .cal1 .clndr .clndr-table tr .adjacent-month:hover,
