@@ -52,7 +52,15 @@
     a {
       color: $medium-text;
       font-size: $meta-text;
+
+      &.active {
+        color: $orange;
+        border-bottom: 4px solid $orange;
+        line-height: 62px;
+        margin: 4px 0 0 0;
+      }
     }
+
     .nav-options {
       text-align: center;
 
@@ -112,6 +120,8 @@
 
   #sidebar-content {
     padding: $small-margin;
+
+    h4 { display: inline-block; }
   }
 
   .sidebar-cards {
@@ -174,11 +184,11 @@
     overflow-y: auto;
     padding: $big-margin;
 
-    #mix-cards.cards .card { display: none; }
+    #mix-cards.cards .card, #planner-events.cards .card { display: none; }
 
     .cards {
       font-size: 0;
-      margin: $small-margin 0 $big-margin 0;
+      margin: $big-margin 0;
       
       .card {
         position: relative;
@@ -242,6 +252,22 @@
         }
       }
     }
+  }
+}
+
+.ghost-button {
+  font-size: $meta-text;
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px solid $light-grey;
+  @include border-radius(3px);
+  @include hover-transition(all, 0.1s, ease-in-out);
+
+  &.right { float: right; }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $medium-text;
   }
 }
 
