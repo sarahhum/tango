@@ -22,4 +22,13 @@ $(document).ready(function(){
     }
   });
 
+  $('.card').on('click', function () {
+    console.log('click');
+    $('.item-detail').show();
+  });
+
+  $('.black-overlay').on('click', function () {
+    $('.item-detail').hide();
+  });
+
 });

@@ -1,0 +1,42 @@
+.item-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+
+  .black-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  p {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    color: $white;
+    top: 50px;
+    font-size: $body-text;
+  }
+
+  .item-detail-content {
+    position: relative;
+    z-index: 999;
+    width: 550px;
+    height: 80%;
+    margin: 75px auto;
+    overflow-y: auto;
+    @include border-radius(3px);
+    background: $white;
+
+    .details {
+      padding: $big-margin;
+    }
+  }
+}

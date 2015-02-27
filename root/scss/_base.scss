@@ -38,7 +38,7 @@
     width: 100%;
     z-index: 999;
     height: $nav-height;
-    background: white;
+    background: $white;
     letter-spacing: 0.04em;
     box-shadow: 0px 2px 0px rgba(100, 100, 100, 0.05);
 
@@ -322,4 +322,4 @@ footer a {
 #footer-content .left, #footer-content .right {
   display: inline-block;
   vertical-align: top;
-  }
+}

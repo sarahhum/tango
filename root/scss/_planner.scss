@@ -20,6 +20,10 @@
   }
 
   #main-content {
-    #planner-countdowns .mix { display: none; }
+    #planner-countdowns .mix {
+      display: none;
+
+      span { color: $medium-text; }
+    }
   }
 }
