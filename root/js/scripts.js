@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+  
   $('#mix-cards').mixItUp({
     animation: {
       enable: false   
