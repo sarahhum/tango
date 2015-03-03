@@ -44,6 +44,7 @@
     max-height: calc(80% - 60px);
     margin: 75px auto;
     overflow-y: auto;
+    overflow-x: hidden;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background: $white;

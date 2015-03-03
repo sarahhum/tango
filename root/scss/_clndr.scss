@@ -138,7 +138,7 @@ box-shadow: inset 0px 0px 0px 4px rgba(255,255,255,1);
 
 .cal1 .clndr .clndr-table tr .day.today,
 .cal1 .clndr .clndr-table tr .day.my-today {
-  background: #9AD6E3;
+  background: $orange;
 }
 .cal1 .clndr .clndr-table tr .day.today:hover,
 .cal1 .clndr .clndr-table tr .day.my-today:hover {

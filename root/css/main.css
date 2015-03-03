@@ -156,6 +156,21 @@ h4 {
     padding: 20px; }
     #sidebar #sidebar-content h4 {
       display: inline-block; }
+    #sidebar #sidebar-content form {
+      width: 100%; }
+      #sidebar #sidebar-content form input {
+        width: 100%;
+        padding: 10px 12px;
+        font-family: "jaf-facitweb", Helvetica Neue, Helvetica, sans-serif;
+        font-size: 14px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #f2f2f2; }
   #sidebar .sidebar-cards .sidebar-card {
     margin: 0 0 10px 0;
     padding: 20px;
@@ -405,6 +420,10 @@ footer a {
   #planner #main-content #planner-countdowns .mix span {
     color: #999; }
 
+#accommodations #sidebar {
+  height: 100%;
+  margin: 0; }
+
 .noselect {
   -webkit-user-select: none;
   /* Chrome/Safari */
@@ -518,7 +537,7 @@ footer a {
 
 .cal1 .clndr .clndr-table tr .day.today,
 .cal1 .clndr .clndr-table tr .day.my-today {
-  background: #9AD6E3; }
+  background: #ff8710; }
 
 .cal1 .clndr .clndr-table tr .day.today:hover,
 .cal1 .clndr .clndr-table tr .day.my-today:hover {
@@ -598,6 +617,7 @@ footer a {
     max-height: calc(80% - 60px);
     margin: 75px auto;
     overflow-y: auto;
+    overflow-x: hidden;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background: #fff; }
