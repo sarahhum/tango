@@ -28,8 +28,7 @@
     <div id="wrapper">
       <div id="sidebar">
         <div id="sidebar-content">
-          <h4 class="section-title">Events</h4>
-          <div class="ghost-button right">Create New</div>
+          <h4>Trip</h4>
           <div id="dd" class="wrapper-dropdown" tabindex="1">
             <span>Christmas Holiday's Visit<br><h4>Dec 30 - Jan 04</h4></span>
             <ul class="dropdown">
@@ -39,8 +38,26 @@
             </ul>
           </div>
           <form action="">
-            <label for="">To</label>
-            <input type="text" placeholder="San Francisco, CA" />
+            <div>
+              <h4>To</h4>
+              <input type="text" value="San Francisco, CA" />
+            </div>
+            <div>
+              <h4>Check In</h4>
+              <input class="half left datepicker" type="text" value="12/30/2014" />
+              <h4>Check Out</h4>
+              <input class="half right datepicker" type="text" value="01/04/2015" />
+            </div>
+            <div>
+              <h4>Guests</h4>
+              <input type="text" value="2" />
+            </div>
+            <div class="price-slider">
+                <h4>Price Range</h4>
+                <div id="slider-range"></div>
+                <input type="text" id="amount-low" readonly>
+                <input type="text" id="amount-high" readonly>
+            </div>
           </form>
         </div>
       </div>
@@ -98,9 +115,7 @@
     </script>
 
     <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-    <script src="js/moment-2.8.3.js"></script>
-    <script src="js/test.js"></script>
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

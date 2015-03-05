@@ -22,10 +22,26 @@ $(document).ready(function(){
 
   // Show the right even labels in planner
   $('.sidebar-card').on('click', function () {
-      console.log($(this).attr("id"));
-      $('#planner-countdowns li').removeClass('active');
-      $('#planner-countdowns li.' + $(this).attr("id")).addClass('active');
+    $('#planner-countdowns li').removeClass('active');
+    $('#planner-countdowns li.' + $(this).attr("id")).addClass('active');
   });
 
+  $(function() {
+    $(".datepicker").datepicker();
+  });
 
+  $(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 2000,
+      values: [ 0, 2000 ],
+      slide: function( event, ui ) {
+        $( "#amount-low" ).val( "$" + ui.values[ 0 ]);
+        $( "#amount-high" ).val( "$" + ui.values[ 1 ]);
+      }
+    });
+    $( "#amount-low" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ));
+    $( "#amount-high" ).val( "$" + $( "#slider-range" ).slider( "values", 1 ) );
+  });
 });
