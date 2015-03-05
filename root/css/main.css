@@ -490,13 +490,15 @@ footer a {
     #planner #sidebar #sidebar-content .sidebar-cards .sidebar-card:hover {
       cursor: pointer; }
     #planner #sidebar #sidebar-content .sidebar-cards .sidebar-card.active {
-      box-shadow: 0 0 0 2pt #ff8710; }
+      box-shadow: inset 0 0 0 2pt #ff8710; }
     #planner #sidebar #sidebar-content .sidebar-cards .sidebar-card .countdown-event {
       top: 0; }
-#planner #main-content #planner-countdowns .mix {
+#planner #main-content #planner-countdowns li {
   display: none; }
-  #planner #main-content #planner-countdowns .mix span {
-    color: #999; }
+  #planner #main-content #planner-countdowns li.active {
+    display: block; }
+#planner #main-content #planner-countdowns span {
+  color: #999; }
 
 #accommodations #sidebar {
   height: 100%;

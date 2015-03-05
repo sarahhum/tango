@@ -12,7 +12,7 @@
       .sidebar-cards .sidebar-card {
         &:hover { cursor: pointer; }
         &.active {
-          box-shadow: 0 0 0 2pt $orange;
+          box-shadow: inset 0 0 0 2pt $orange;
         }
         .countdown-event { top: 0; }
       }
@@ -20,8 +20,14 @@
   }
 
   #main-content {
-    #planner-countdowns .mix {
-      display: none;
+    #planner-countdowns {
+      li {
+        display: none;
+
+        &.active { display: block; }
+      }
+      
+      // &.event-1, &.event-2, &.event-3 { display: none !important; }
 
       span { color: $medium-text; }
     }

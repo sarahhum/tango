@@ -31,15 +31,14 @@
           <h4 class="section-title">Events</h4>
           <div class="ghost-button right">Create New</div>
           <ul class="sidebar-cards">
-            <!-- <li class="sidebar-card filter" data-filter="all">
+            <li class="sidebar-card filter active" id="all" data-filter="all">
               <div class="card-countdown">
                 <div class="countdown-event">
-                  <h1>All Bookmarked</h1>
-                  <h4>Dec 30 - Jan 01</h4>
+                  <h1>All Bookmarks</h1>
                 </div>
               </div>
-            </li> -->
-            <li class="sidebar-card filter" data-filter=".event-1">
+            </li>
+            <li class="sidebar-card filter" id="event-1" data-filter=".event-1">
               <div class="card-countdown">
                 <div class="countdown-event">
                   <h1>Christmas Holiday's Visit</h1>
@@ -47,7 +46,7 @@
                 </div>
               </div>
             </li>
-            <li class="sidebar-card filter" data-filter=".event-2">
+            <li class="sidebar-card filter" id="event-2" data-filter=".event-2">
               <div class="card-countdown">
                 <div class="countdown-event">
                   <h1>Valentine's Day</h1>
@@ -55,7 +54,7 @@
                 </div>
               </div>
             </li>
-            <li class="sidebar-card filter" data-filter=".event-3">
+            <li class="sidebar-card filter" id="event-3" data-filter=".event-3">
               <div class="card-countdown">
                 <div class="countdown-event">
                   <h1>Grad Trip</h1>
@@ -70,10 +69,10 @@
       <div id="main">
         <div id="main-content">
           <ul id="planner-countdowns">
-            <li class="mix" data-myorder="1"><h1>All Bookmarks</h1></li>
-            <li class="mix event-1" data-myorder="1"><h1>Christmas Holiday's Visit <span>is in</span> 8 days!</h1></li>
-            <li class="mix event-2" data-myorder="2"><h1>Valentine's Day <span>is in</span> 52 days!</h1></li>
-            <li class="mix event-3" data-myorder="3"><h1>Grad Trip <span>is in</span> 134 days!</h1></li>
+            <li class="all active"><h1>All Bookmarks</h1></li>
+            <li class="event-1"><h1>Christmas Holiday's Visit <span>is in</span> 8 days!</h1></li>
+            <li class="event-2"><h1>Valentine's Day <span>is in</span> 52 days!</h1></li>
+            <li class="event-3"><h1>Grad Trip <span>is in</span> 134 days!</h1></li>
           </ul>
           <ul id="planner-events" class="cards">
             <li class="card mix event-1" data-myorder="1">
