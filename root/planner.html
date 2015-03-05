@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>Tango</title>
+    <title>Tango — Planner</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Tango with your">
@@ -171,7 +171,59 @@
         </div>
       </div>
     </div>
-
+  
+    <div class="item-detail bookmarked">
+      <div class="black-overlay"></div>
+      <ul class="item-links">
+        <li>Mark as booked</li>
+        <li>Remove from bookmarks</li>
+      </ul>
+      <!-- <div class="chat"></div> -->
+      <div class="item-detail-content">
+        <div class="left">
+          <ul class="chat">
+            <li class="partner">This place looks amazing</li>
+            <li class="user">It's really close to that museum I want to check out too!</li>
+            <li class="user">Do you like this place better or the one with the balcony?</li>
+            <li class="partner">Definitely this one, it's cheaper too!</li>
+            <li class="user">Okay, let's book it!</li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="img/item-img/01-01.jpg" />
+              </li>
+              <li>
+                <img src="img/item-img/01-02.jpg" />
+              </li>
+            </ul>
+          </div>
+          <div class="details">
+            <div class="details-title">
+              <h1>Caribou at the Fillmore SF</h1>
+              <h3>San Francisco, California</h3>
+            </div>
+            <h2>Event Details</h2>
+            <p>Sunday, March 1, 2015 @ 8:00pm<br>Please note that doors open at 7:00pm</p>
+            <p><strong>The Fillmore</strong><br>1805 Geary Boulevard<br>San Francisco, CA 94115</p>
+            <br>
+            <p>Dan Snaith is Caribou, a Canadian composer, musician and recording artist. Our Love is his sixth studio album, released on October 6, 2014 via City Slang worldwide (excluding the Americas), and October 7, 2014 through Merge Records in North and South America. Join us at The Fillmore.</p>
+            <p>The Fillmore was a dance hall operating under various names and managements – The Get Acquainted Society, Ambassador Dance Hall – through the 1930s, and a roller rink through the 1940s. In 1952, local entrepreneur Charles Sullivan began to book some of the biggest names in black music into The Fillmore. Sullivan booked West Coast tours for performers including James Brown, Bobby ‘Blue’ Bland and Ike & Tina Turner. During the 1950s and 1960s, San Francisco gained a reputation as the preeminent Bohemian community in the United States.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-container">
+        <input type="text" placeholder="Leave a message" />
+        <div class="footer">
+          <div class="footer-content">
+            <p class="price">$35<span>USD</span></p>
+            <div class="ghost-button">Buy Tickets</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="text/template" id="clndr-template">
       <div class="clndr-controls">
         <div class="clndr-previous-button">&lsaquo;</div>
@@ -199,6 +251,7 @@
     <script src="js/moment-2.8.3.js"></script>
     <script type="text/javascript" src="js/clndr.min.js"></script>
     <script src="js/test.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>
