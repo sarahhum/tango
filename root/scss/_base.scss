@@ -74,7 +74,7 @@
     }
 
     .nav-options {
-      text-align: center;
+      margin: 0 0 0 200px;
 
       li {
         display: inline-block;
@@ -115,8 +115,7 @@
 #sidebar {
   float: left;
   width: $sidebar-width;
-  height: calc(100% - 304px);
-  margin: 304px 0 0 0;
+  height: 100%;
   background: $white;
   display: inline-block;
   -webkit-user-select: none;

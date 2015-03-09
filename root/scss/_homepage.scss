@@ -1,4 +1,9 @@
 #homepage {
+  #sidebar {
+    height: calc(100% - 304px);
+    margin: 304px 0 0 0;
+  }
+
   #user-image {
     position: fixed;
     top: $nav-height;

@@ -3,4 +3,42 @@
     height: 100%;
     margin: 0;
   }
+
+  #main {
+    height: 100%;
+    #main-content {
+      padding: 0;
+
+      #map-canvas {
+        width: 100%;
+        height: 100%;
+        background-color: $light-background;
+
+        .gm-style-iw {
+          top: 0px !important;
+          left: 0px !important;
+        }
+
+        #info-window {
+          width: 220px;
+          font-family: $main-font; 
+
+          h1 {
+            font-size: $body-text;
+            font-weight: 700;
+            padding: 5px 15px;
+          }
+
+          p {
+            color: $medium-text;
+            padding: 0 15px;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

@@ -44,4 +44,7 @@ $(document).ready(function(){
     $( "#amount-low" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ));
     $( "#amount-high" ).val( "$" + $( "#slider-range" ).slider( "values", 1 ) );
   });
+
+
+  $('#info-window').parent().addClass('testing');
 });

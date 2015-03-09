@@ -1,13 +1,15 @@
 /* DatePicker Container */
 .ui-datepicker {
+  z-index: 9 !important;
   width: 216px;
   height: auto;
   margin: 5px auto 0;
   font-family: $main-font;
   font-size: $small-text;
-  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
-  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+  background: $white;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .3);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .3);
   @include border-radius(3px);
 }
 .ui-datepicker a {
