@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Tango</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Tango with your">
+    <meta name="keywords" content="long distance relationship love travel trips plan calendar itinerary couple">
+    <meta name="author" content="Sarah Hum">
+    <meta name="copyright" content="&copy; 2015 Sarah Hum">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <script src="//use.typekit.net/txh2bpg.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(37.7733, -122.4377),
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+
+
+        setMarkers(map, houses);
+
+        
+      }
+
+      var houses = [
+        ['Bondi Beach', 37.7733, -122.4377, 4],
+        ['Coogee Beach', 37.7633, -122.4277, 5],
+        ['Cronulla Beach', 37.7533, -122.4577, 3],
+        ['Manly Beach', 37.7933, -122.4317, 2],
+        ['Maroubra Beach', 37.7833, -122.3999, 1]
+      ];
+
+      function setMarkers(map, locations) {
+        // Marker sizes are expressed as a Size of X,Y
+        // where the origin of the image (0,0) is located
+        // in the top left of the image.
+
+        // Origins, anchor positions and coordinates of the marker
+        // increase in the X direction to the right and in
+        // the Y direction down.
+        var image = {
+          url: 'img/map-marker.png',
+          // This marker is 20 pixels wide by 32 pixels tall.
+          size: new google.maps.Size(20, 32),
+          // The origin for this image is 0,0.
+          origin: new google.maps.Point(0,0),
+          // The anchor for this image is the base of the flagpole at 0,32.
+          anchor: new google.maps.Point(0, 32)
+        };
+        // Shapes define the clickable region of the icon.
+        // The type defines an HTML &lt;area&gt; element 'poly' which
+        // traces out a polygon as a series of X,Y points. The final
+        // coordinate closes the poly by connecting to the first
+        // coordinate.
+        var shape = {
+            coords: [1, 1, 1, 20, 18, 20, 18 , 1],
+            type: 'poly'
+        };
+
+
+        var contentString = '<div id="info-window" class="card">'+'<img class="card" src="img/bedroom.jpg" />'+
+      '<h1 id="" class="firstHeading">Sunny Private Room</h1>'+
+      '<p>Neighborhood: SOMA</p>'+'</div>';
+
+        $('#info-window').parent().addClass('testing'); 
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        for (var i = 0; i < locations.length; i++) {
+          var house = locations[i];
+          var myLatLng = new google.maps.LatLng(house[1], house[2]);
+          var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              icon: image,
+              shape: shape,
+              title: house[0],
+              zIndex: house[3]
+          });
+        }
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body id="flights">
+    <nav>
+      <a href="/"><img class="logo" src="img/logo.svg" /></a>
+      <ul class="nav-options">
+        <li><a class="active" href="flights.html">Flights</a></li>
+        <li><a href="accommodations.html">Accommodations</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+      <a class="planner-link" href="planner.html">Planner</a>
+    </nav>
+    <div id="wrapper">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <h4>Trip</h4>
+          <div id="dd" class="wrapper-dropdown" tabindex="1">
+            <span>Christmas Holiday's Visit<br><h4>Dec 30 - Jan 04</h4></span>
+            <ul class="dropdown">
+              <li><a href="#">Christmas Holiday's Visit<br><h4>Dec 30 - Jan 04</h4></a></li>
+              <li><a href="#">Valentine's Day<br><h4>Feb 12 - Feb 16</h4></a></li>
+              <li><a href="#">Grad Trip<br><h4>May 05 - May 25</h4></a></li>
+            </ul>
+          </div>
+          <form action="">
+            <div>
+              <h4>From</h4>
+              <input class="half left" type="text" value="HVN" />
+              <h4>To</h4>
+              <input class="half right" type="text" value="SFO, SJC" />
+            </div>
+            <div>
+              <h4>Departure</h4>
+              <input class="half left datepicker" type="text" value="12/30/2014" />
+              <h4>Return</h4>
+              <input class="half right datepicker" type="text" value="01/04/2015" />
+            </div>
+            <div>
+              <h4>Passenger</h4>
+              <input type="text" value="1, adult" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="main">
+        <div id="main-content">
+          <ul class="subnav">
+            <li class="filter active">Price</li>
+            <li class="filter">Airline</li>
+            <li class="filter">Departure</li>
+            <li class="filter">Return</li>
+            <li class="filter">Duration</li>
+            <li class="filter">Stops</li>
+          </ul>
+          <ul class="flight cards">
+            <li class="flight card">
+              <div class="card-content">
+                <div class="airline">
+                  <span class="price">$472</span>
+                  <h4>US Airways</h4>
+                </div>
+                <div class="departure">
+                  <h4>Dec 30</h4>
+                  <h1>7:00am-8:16am</h1>
+                  <h4>HVN</h4>
+                </div>
+                <div class="layover">
+                  <h4>Layover</h4>
+                  <h1>2h 04m</h1>
+                  <h4>PHL</h4>
+                </div>
+                <div class="arrival">
+                  <h4>Dec 30</h4>
+                  <h1>10:20am-1:48pm</h1>
+                  <h4>SFO</h4>
+                </div>
+                <div class="total">
+                  <h4>Total Duration</h4>
+                  <h1>9h 48m</h1>
+                  <h4>1 stop - PHL</h4>
+                </div>
+              </div>
+            </li>
+            <li class="flight card">
+              <div class="card-content">
+                <div class="airline">
+                  <span class="price">$560</span>
+                  <h4>United</h4>
+                </div>
+                <div class="departure">
+                  <h4>Dec 30</h4>
+                  <h1>3:40px-4:56pm</h1>
+                  <h4>HVN</h4>
+                </div>
+                <div class="layover">
+                  <h4>Layover</h4>
+                  <h1>1h 04m</h1>
+                  <h4>PHL</h4>
+                </div>
+                <div class="arrival">
+                  <h4>Dec 30</h4>
+                  <h1>6:00pm-9:27pm</h1>
+                  <h4>SFO</h4>
+                </div>
+                <div class="total">
+                  <h4>Total Duration</h4>
+                  <h1>8h 48m</h1>
+                  <h4>1 stop - PHL</h4>
+                </div>
+              </div>
+            </li>
+            <li class="flight card">
+              <div class="card-content">
+                <div class="airline">
+                  <span class="price">$700</span>
+                  <h4>American</h4>
+                </div>
+                <div class="departure">
+                  <h4>Dec 30</h4>
+                  <h1>7:00am-8:16am</h1>
+                  <h4>HVN</h4>
+                </div>
+                <div class="layover"></div>
+                <div class="arrival">
+                  <h4>Dec 30</h4>
+                  <h1>10:20am-1:48pm</h1>
+                  <h4>SFO</h4>
+                </div>
+                <div class="total">
+                  <h4>Total Duration</h4>
+                  <h1>7h 48m</h1>
+                  <h4>Non-stop</h4>
+                </div>
+              </div>
+            </li>
+            <li class="flight card">
+              <div class="card-content">
+                <div class="airline">
+                  <span class="price">$781</span>
+                  <h4>American</h4>
+                </div>
+                <div class="departure">
+                  <h4>Dec 30</h4>
+                  <h1>7:00am-8:16am</h1>
+                  <h4>HVN</h4>
+                </div>
+                <div class="layover"></div>
+                <div class="arrival">
+                  <h4>Dec 30</h4>
+                  <h1>10:20am-1:48pm</h1>
+                  <h4>SFO</h4>
+                </div>
+                <div class="total">
+                  <h4>Total Duration</h4>
+                  <h1>7h 48m</h1>
+                  <h4>Non-stop</h4>
+                </div>
+              </div>
+            </li>
+            <li class="flight card">
+              <div class="card-content">
+                <div class="airline">
+                  <span class="price">$808</span>
+                  <h4>United</h4>
+                </div>
+                <div class="departure">
+                  <h4>Dec 30</h4>
+                  <h1>7:00am-8:16am</h1>
+                  <h4>HVN</h4>
+                </div>
+                <div class="layover"></div>
+                <div class="arrival">
+                  <h4>Dec 30</h4>
+                  <h1>10:20am-1:48pm</h1>
+                  <h4>SFO</h4>
+                </div>
+                <div class="total">
+                  <h4>Total Duration</h4>
+                  <h1>7h 48m</h1>
+                  <h4>Non-stop</h4>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript">  
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown').removeClass('active');
+        });
+
+      });
+    </script>
+
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>
+
