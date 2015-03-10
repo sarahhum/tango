@@ -16,8 +16,15 @@ $(document).ready(function(){
     console.log('click');
     $('.item-detail').show();
   });
+
+  $('.ghost-button').on('click', function () {
+    console.log('click');
+    $('.create-event').show();
+    document.getElementById("focus-field").focus();
+  });
+
   $('.black-overlay').on('click', function () {
-    $('.item-detail').hide();
+    $('.item-detail, .create-event').hide();
   });
 
   // Show the right even labels in planner
