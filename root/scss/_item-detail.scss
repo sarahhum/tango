@@ -43,6 +43,16 @@
     li {
       display: inline-block;
       margin: 0 15px;
+
+      a {
+        color: $white;
+        border-bottom: 1px dotted rgba($white, 0.4);
+        @include hover-transition(border, 0.1s, ease-in-out);
+
+        &:hover {
+          border-bottom: 1px dotted rgba($white, 1);          
+        }
+      }
     }
   }
 

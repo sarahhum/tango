@@ -1,5 +1,13 @@
 #flights {
   #main #main-content {
+    h1.heading {
+      font-size: 18px;
+      display: inline-block;
+      margin: 0 20px 0 0;
+
+      &:nth-child(2) { color: $light-grey; }
+    }
+
     .subnav {
       position: relative;
       height: 45px;

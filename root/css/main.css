@@ -122,11 +122,11 @@ nav {
 
 h1 {
   font-size: 16px;
-  color: #444; }
+  color: #262F40; }
 
 h2 {
   font-size: 14px;
-  color: #444; }
+  color: #262F40; }
 
 h3 {
   font-size: 14px;
@@ -185,7 +185,7 @@ h4 {
         padding: 30px 12px 10px 12px;
         font-family: "jaf-facitweb", Helvetica Neue, Helvetica, sans-serif;
         font-size: 14px;
-        color: #444;
+        color: #262F40;
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
         -khtml-border-radius: 3px;
@@ -247,8 +247,6 @@ h4 {
       position: relative;
       top: 4px;
       display: inline-block; }
-      #sidebar .sidebar-cards .sidebar-card .countdown-event h1 {
-        margin: 0 0 4px 0; }
 
 #main {
   height: calc(100% - 80px);
@@ -376,7 +374,7 @@ footer a {
   display: block;
   color: #888; }
   footer a:hover {
-    color: #444; }
+    color: #262F40; }
 
 #main-content footer #copyright {
   font-size: 10px;
@@ -403,7 +401,7 @@ footer a {
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-  color: #444;
+  color: #262F40;
   border: 1px solid #ddd;
   cursor: pointer;
   outline: none;
@@ -436,7 +434,7 @@ footer a {
       display: block;
       padding: 10px;
       text-decoration: none;
-      color: #444;
+      color: #262F40;
       border-bottom: 1px solid #e6e8ea; }
     .wrapper-dropdown .dropdown li i {
       float: right;
@@ -586,6 +584,12 @@ footer a {
         #accommodations #main #main-content #map-canvas #info-window img {
           width: 100%; }
 
+#flights #main #main-content h1.heading {
+  font-size: 18px;
+  display: inline-block;
+  margin: 0 20px 0 0; }
+  #flights #main #main-content h1.heading:nth-child(2) {
+    color: #ddd; }
 #flights #main #main-content .subnav {
   position: relative;
   height: 45px;
@@ -641,7 +645,7 @@ footer a {
         font-weight: 700;
         line-height: 32px; }
       #flights #main #main-content .flight.cards .flight.card .card-content div h4:last-child {
-        color: #444; }
+        color: #262F40; }
       #flights #main #main-content .flight.cards .flight.card .card-content div .price {
         position: relative;
         top: 0;
@@ -753,7 +757,7 @@ footer a {
   height: 44px;
   font-size: 12px;
   font-weight: 700;
-  color: #444; }
+  color: #262F40; }
 
 .cal1 .clndr .clndr-table .header-days .header-day {
   vertical-align: middle;
@@ -839,7 +843,7 @@ footer a {
     line-height: 22px;
     margin: 0 0 10px 0; }
     .item-detail p strong {
-      color: #444; }
+      color: #262F40; }
   .item-detail .item-links {
     position: relative;
     z-index: 999;
@@ -851,6 +855,16 @@ footer a {
     .item-detail .item-links li {
       display: inline-block;
       margin: 0 15px; }
+      .item-detail .item-links li a {
+        color: #fff;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+        -webkit-transition: border 0.1s ease-in-out;
+        -moz-transition: border 0.1s ease-in-out;
+        -ms-transition: border 0.1s ease-in-out;
+        -o-transition: border 0.1s ease-in-out;
+        transition: border 0.1s ease-in-out; }
+        .item-detail .item-links li a:hover {
+          border-bottom: 1px dotted white; }
   .item-detail .item-detail-content {
     position: relative;
     z-index: 999;
@@ -998,7 +1012,7 @@ footer a {
         padding: 30px 12px 10px 12px;
         font-family: "jaf-facitweb", Helvetica Neue, Helvetica, sans-serif;
         font-size: 14px;
-        color: #444;
+        color: #262F40;
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
         -khtml-border-radius: 3px;
@@ -1137,7 +1151,6 @@ html[xmlns] .flexslider .slides {
   *height: 0; }
   .flex-direction-nav a {
     text-decoration: none;
-    display: block;
     width: 45px;
     height: 45px;
     margin: -20px 0 0;
@@ -1147,13 +1160,14 @@ html[xmlns] .flexslider .slides {
     overflow: hidden;
     opacity: 0;
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.9);
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    transition: all 0.3s ease-in-out;
+    outline: none; }
     .flex-direction-nav a:before {
       border-style: solid;
       border-width: 3px 3px 0 0;
@@ -1166,7 +1180,8 @@ html[xmlns] .flexslider .slides {
       left: 10px;
       position: relative;
       transform: rotate(-135deg);
-      vertical-align: top; }
+      vertical-align: top;
+      outline: none; }
     .flex-direction-nav a.flex-next:before {
       content: '';
       left: -10px;
@@ -1310,7 +1325,7 @@ html[xmlns] .flexslider .slides {
   width: 100%; }
 
 .ui-datepicker-header {
-  color: #444;
+  color: #262F40;
   font-size: 12px;
   font-weight: 400;
   line-height: 34px;

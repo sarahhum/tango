@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>Tango</title>
+    <title>Tango — Flights</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Tango with your">
@@ -14,87 +14,6 @@
     <script>try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map-canvas');
-        var mapOptions = {
-          center: new google.maps.LatLng(37.7733, -122.4377),
-          zoom: 13,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-
-
-
-        setMarkers(map, houses);
-
-        
-      }
-
-      var houses = [
-        ['Bondi Beach', 37.7733, -122.4377, 4],
-        ['Coogee Beach', 37.7633, -122.4277, 5],
-        ['Cronulla Beach', 37.7533, -122.4577, 3],
-        ['Manly Beach', 37.7933, -122.4317, 2],
-        ['Maroubra Beach', 37.7833, -122.3999, 1]
-      ];
-
-      function setMarkers(map, locations) {
-        // Marker sizes are expressed as a Size of X,Y
-        // where the origin of the image (0,0) is located
-        // in the top left of the image.
-
-        // Origins, anchor positions and coordinates of the marker
-        // increase in the X direction to the right and in
-        // the Y direction down.
-        var image = {
-          url: 'img/map-marker.png',
-          // This marker is 20 pixels wide by 32 pixels tall.
-          size: new google.maps.Size(20, 32),
-          // The origin for this image is 0,0.
-          origin: new google.maps.Point(0,0),
-          // The anchor for this image is the base of the flagpole at 0,32.
-          anchor: new google.maps.Point(0, 32)
-        };
-        // Shapes define the clickable region of the icon.
-        // The type defines an HTML &lt;area&gt; element 'poly' which
-        // traces out a polygon as a series of X,Y points. The final
-        // coordinate closes the poly by connecting to the first
-        // coordinate.
-        var shape = {
-            coords: [1, 1, 1, 20, 18, 20, 18 , 1],
-            type: 'poly'
-        };
-
-
-        var contentString = '<div id="info-window" class="card">'+'<img class="card" src="img/bedroom.jpg" />'+
-      '<h1 id="" class="firstHeading">Sunny Private Room</h1>'+
-      '<p>Neighborhood: SOMA</p>'+'</div>';
-
-        $('#info-window').parent().addClass('testing'); 
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-
-        for (var i = 0; i < locations.length; i++) {
-          var house = locations[i];
-          var myLatLng = new google.maps.LatLng(house[1], house[2]);
-          var marker = new google.maps.Marker({
-              position: myLatLng,
-              map: map,
-              icon: image,
-              shape: shape,
-              title: house[0],
-              zIndex: house[3]
-          });
-        }
-
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
-        });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
   </head>
   <body id="flights">
     <nav>
@@ -141,6 +60,8 @@
       </div>
       <div id="main">
         <div id="main-content">
+          <h1 class="heading">Departure</h1>
+          <h1 class="heading">Return</h1>
           <ul class="subnav">
             <li class="filter active">Price</li>
             <li class="filter">Airline</li>

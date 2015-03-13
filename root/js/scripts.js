@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-  $(window).load(function() {
-    $('.flexslider').flexslider();
-  });
+  // $(window).load(function() {
+  //   $('.flexslider').flexslider();
+  // });
   
 
   $('#mix-cards, #planner-events, #planner-countdowns').mixItUp({
@@ -11,14 +11,25 @@ $(document).ready(function(){
     }
   });
 
+  var img;
+
   // Show/hide item details
   $('.card').on('click', function () {
-    console.log('click');
+    img = $(this).find('img').attr('src');
+    title = $(this).find('h2').html();
+    meta = $(this).find('h3').html();
+    console.log(title);
+
+    $('.slides').empty().append('<li><img src="' + img + '" /></li>');
+    $('.details-title h1').empty().append(title);
+    $('.details-title h3').empty().append(meta);
+
+    $('.flexslider').removeData("flexslider");
+    $('.flexslider').flexslider();
     $('.item-detail').show();
   });
 
   $('.ghost-button').on('click', function () {
-    console.log('click');
     $('.create-event').show();
     document.getElementById("focus-field").focus();
   });
