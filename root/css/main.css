@@ -1138,8 +1138,8 @@ html[xmlns] .flexslider .slides {
   .flex-direction-nav a {
     text-decoration: none;
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin: -20px 0 0;
     position: absolute;
     top: 50%;
@@ -1155,12 +1155,22 @@ html[xmlns] .flexslider .slides {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .flex-direction-nav a:before {
-      font-family: "flexslider-icon";
-      font-size: 40px;
+      border-style: solid;
+      border-width: 3px 3px 0 0;
+      border-color: #fff;
+      content: '';
       display: inline-block;
-      content: '\f001'; }
+      width: 20px;
+      height: 20px;
+      top: 10px;
+      left: 10px;
+      position: relative;
+      transform: rotate(-135deg);
+      vertical-align: top; }
     .flex-direction-nav a.flex-next:before {
-      content: '\f002'; }
+      content: '';
+      left: -10px;
+      transform: rotate(45deg); }
 
 .flex-direction-nav .flex-prev {
   left: -50px; }
@@ -1169,12 +1179,12 @@ html[xmlns] .flexslider .slides {
   text-align: right; }
 
 .flexslider:hover .flex-direction-nav .flex-prev {
-  opacity: 0.7;
+  opacity: 0.8;
   left: 10px; }
   .flexslider:hover .flex-direction-nav .flex-prev:hover {
     opacity: 1; }
 .flexslider:hover .flex-direction-nav .flex-next {
-  opacity: 0.7;
+  opacity: 0.8;
   right: 10px; }
   .flexslider:hover .flex-direction-nav .flex-next:hover {
     opacity: 1; }
