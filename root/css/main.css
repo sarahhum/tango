@@ -314,6 +314,8 @@ h4 {
           padding: 10px 20px 15px 20px; }
           #main #main-content .cards .card .card-info h2 {
             margin: 0 0 5px 0; }
+        #main #main-content .cards .card .hidden-details {
+          display: none; }
 
 .ghost-button {
   font-size: 12px;

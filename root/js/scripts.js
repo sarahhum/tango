@@ -15,14 +15,25 @@ $(document).ready(function(){
 
   // Show/hide item details
   $('.card').on('click', function () {
-    img = $(this).find('img').attr('src');
     title = $(this).find('h2').html();
     meta = $(this).find('h3').html();
-    console.log(title);
+    price = $(this).find('.price').html();
+    hiddenDetails = $(this).find('.hidden-details').html();
+    imgcontainer = $(this).find('.img-container');
+    
+    $('.slides').empty();
+    $('ol.flex-control-nav.flex-control-paging').empty();
+    $('ul.flex-direction-nav').empty();
 
-    $('.slides').empty().append('<li><img src="' + img + '" /></li>');
+    $(imgcontainer).children('img').each(function () {
+        img = $(this).attr('src');
+        $('.slides').append('<li><img src="' + img + '" /></li>');
+    });
+
     $('.details-title h1').empty().append(title);
     $('.details-title h3').empty().append(meta);
+    $('.details-container').empty().append(hiddenDetails);
+    $('.footer-content .price').empty().append(price + '<span>USD</span>');
 
     $('.flexslider').removeData("flexslider");
     $('.flexslider').flexslider();
