@@ -100,8 +100,8 @@ nav {
     line-height: 70px;
     display: inline-block; }
     nav a.active {
-      color: #ff8710;
-      border-bottom: 2px solid #ff8710;
+      color: #262F40;
+      border-bottom: 2px solid #262F40;
       line-height: 66px;
       margin: 4px 0 0 0; }
     nav a.planner-link {
@@ -121,8 +121,9 @@ nav {
       text-transform: uppercase; }
 
 h1 {
-  font-size: 16px;
-  color: #262F40; }
+  font-size: 14px;
+  color: #262F40;
+  font-weight: 600; }
 
 h2 {
   font-size: 14px;
@@ -470,6 +471,42 @@ footer a {
   opacity: 1;
   pointer-events: auto; }
 
+@font-face {
+  font-family: "tango-icons";
+  src: url("../fonts/tango-icons.eot");
+  src: url("../fonts/tango-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/tango-icons.woff") format("woff"), url("../fonts/tango-icons.ttf") format("truetype"), url("../fonts/tango-icons.svg#tango-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[data-icon]:before {
+  font-family: "tango-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "tango-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-heart:before {
+  content: "a"; }
+
+.icon-pin:before {
+  content: "b"; }
+
 #homepage #sidebar {
   height: calc(100% - 304px);
   margin: 304px 0 0 0; }
@@ -479,7 +516,7 @@ footer a {
   height: 300px;
   width: 350px;
   overflow: hidden;
-  border-bottom: 3px solid #ff8710; }
+  border-bottom: 3px solid #262F40; }
   #homepage #user-image img {
     position: relative;
     height: 320px;
@@ -503,17 +540,33 @@ footer a {
     /* W3C */ }
     #homepage #user-image .user-info h1 {
       position: absolute;
-      top: 230px;
+      top: 215px;
       left: 20px;
       color: #fff;
-      font-size: 20px; }
-    #homepage #user-image .user-info h2 {
+      font-size: 20px;
+      font-weight: 400; }
+    #homepage #user-image .user-info .anniversary {
       position: absolute;
-      top: 260px;
-      left: 20px;
+      top: 243px;
+      left: 40px;
       color: #fff;
       opacity: 0.7;
       font-size: 14px; }
+      #homepage #user-image .user-info .anniversary div {
+        position: absolute;
+        margin: 1px 0 0 -21px;
+        font-size: 16px; }
+    #homepage #user-image .user-info .locations {
+      position: absolute;
+      top: 265px;
+      left: 40px;
+      color: #fff;
+      opacity: 0.7;
+      font-size: 14px; }
+      #homepage #user-image .user-info .locations div {
+        position: absolute;
+        margin: 1px 0 0 -20px;
+        opacity: 1; }
 #homepage .subnav {
   height: 45px;
   width: 100%;
@@ -833,8 +886,6 @@ footer a {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7); }
-  .item-detail .details-title {
-    margin: 0 0 30px 0; }
   .item-detail h1 {
     margin: 0 0 7px 0; }
   .item-detail p {
@@ -842,7 +893,7 @@ footer a {
     z-index: 999;
     color: #999;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 23px;
     margin: 0 0 10px 0; }
     .item-detail p strong {
       color: #262F40; }
@@ -913,6 +964,22 @@ footer a {
       padding: 0 0 0 300px; }
     .item-detail .item-detail-content .details {
       padding: 40px; }
+      .item-detail .item-detail-content .details .details-title {
+        margin: 0 0 40px 0; }
+        .item-detail .item-detail-content .details .details-title h1 {
+          font-size: 20px;
+          line-height: 24px; }
+      .item-detail .item-detail-content .details .details-container a {
+        color: #262F40;
+        font-size: 14px;
+        border-bottom: 1px dotted rgba(38, 47, 64, 0.4);
+        -webkit-transition: border 0.1s ease-in-out;
+        -moz-transition: border 0.1s ease-in-out;
+        -ms-transition: border 0.1s ease-in-out;
+        -o-transition: border 0.1s ease-in-out;
+        transition: border 0.1s ease-in-out; }
+        .item-detail .item-detail-content .details .details-container a:hover {
+          border-bottom: 1px dotted #262f40; }
   .item-detail .footer-container {
     position: relative;
     width: 550px;

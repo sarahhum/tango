@@ -36,7 +36,10 @@ $(document).ready(function(){
     $('.footer-content .price').empty().append(price + '<span>USD</span>');
 
     $('.flexslider').removeData("flexslider");
-    $('.flexslider').flexslider();
+    $('.flexslider').flexslider({
+      slideshowSpeed: 4000,
+      pauseOnHover: true
+    });
     $('.item-detail').show();
   });
 

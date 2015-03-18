@@ -56,8 +56,8 @@
       display: inline-block;
 
       &.active {
-        color: $orange;
-        border-bottom: 2px solid $orange;
+        color: $blue;
+        border-bottom: 2px solid $blue;
         line-height: 66px;
         margin: 4px 0 0 0;
       }
@@ -86,8 +86,9 @@
   }
 
   h1 {
-    font-size: $title-text;
+    font-size: $body-text;
     color: $dark-text;
+    font-weight: 600;
   }
 
   h2 {
@@ -526,3 +527,51 @@ footer a {
     opacity: 1;
     pointer-events: auto;
 }
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "tango-icons";
+  src:url("../fonts/tango-icons.eot");
+  src:url("../fonts/tango-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/tango-icons.woff") format("woff"),
+    url("../fonts/tango-icons.ttf") format("truetype"),
+    url("../fonts/tango-icons.svg#tango-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "tango-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "tango-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heart:before {
+  content: "a";
+}
+.icon-pin:before {
+  content: "b";
+}
+

@@ -16,8 +16,6 @@
     background: rgba(0, 0, 0, 0.7);
   }
 
-  .details-title { margin: 0 0 30px 0; }
-
   h1 { margin: 0 0 7px 0; }
 
   p {
@@ -25,7 +23,7 @@
     z-index: 999;
     color: $medium-text;
     font-size: $body-text;
-    line-height: 22px;
+    line-height: 23px;
     margin: 0 0 10px 0;
 
     strong { color: $dark-text; }
@@ -112,6 +110,23 @@
 
     .details {
       padding: $big-margin;
+
+      .details-title {
+        margin: 0 0 $big-margin 0;
+
+        h1 { font-size: 20px; line-height: 24px; }
+      }
+
+      .details-container {
+        a {
+          color: $blue;
+          font-size: 14px;
+          border-bottom: 1px dotted rgba($blue, 0.4);
+          @include hover-transition(border, 0.1s, ease-in-out);
+
+          &:hover { border-bottom: 1px dotted rgba($blue, 1); }
+        }
+      }
     }
   }
 

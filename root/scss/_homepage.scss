@@ -10,7 +10,7 @@
     height: 300px;
     width: $sidebar-width;
     overflow: hidden;
-    border-bottom: 3px solid $orange;
+    border-bottom: 3px solid $blue;
 
     img {
       position: relative;
@@ -32,19 +32,41 @@
 
       h1 {
         position: absolute;
-        top: 230px;
+        top: 215px;
         left: $small-margin;
         color: $white;
         font-size: 20px;
+        font-weight: 400;
       }
 
-      h2 {
+      .anniversary {
         position: absolute;
-        top: 260px;
-        left: $small-margin;
+        top: 243px;
+        left: $small-margin + 20;
         color: $white;
         opacity: 0.7;
         font-size: $body-text;
+        
+        div {
+          position: absolute;
+          margin: 1px 0 0 -21px;
+          font-size: 16px;
+        }
+      }
+
+      .locations {
+        position: absolute;
+        top: 265px;
+        left: $small-margin + 20;
+        color: $white;
+        opacity: 0.7;
+        font-size: $body-text;
+
+        div {
+          position: absolute;
+          margin: 1px 0 0 -20px;
+          opacity: 1;
+        }
       }
     }
   }
